@@ -35,6 +35,14 @@
 
         output.textContent = "9:00pm - 11:00pm: Movie at Century City 🍿🎦";
         await pause(2000);
+
+        // Surprise twist - mood after watching the movie
+        const movieSelection = ["Heat", "Inception", "The Accountant", "Casino", "Man on Fire"];
+        const movieMoods = ["Motivated", "Frustrated", "Chill", "Disappointed", "Excited"];
+        const currentMood = movieMoods[Math.floor(Math.random() * movieMoods.length)];
+        const movie = movieSelection[Math.floor(Math.random() * movieSelection.length)];
+
+        output.textContent = `I feel ${currentMood} after watching ${movie}!!`;
     }
 
     dailyRoutine();
