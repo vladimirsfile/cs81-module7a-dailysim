@@ -12,7 +12,32 @@
   <script>
     const output = document.getElementById("output");
     
-    
+    function pause(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    } 
+
+    // I am using ratio where 1000 milliseconds equals 1 hour of activity. 
+    async function dailyRoutine() {
+        output.textContent = "8:00am - 8:30am: Eat breakfast 🧇🥞";
+        await pause(500);
+
+        output.textContent = "10:00am - 11:30am: Play tennis 🎾🎾";
+        await pause(1500);
+
+        output.textContent = "12:00pm - 1:00pm: Eat lunch 🍕🍔";
+        await pause(1000);
+
+        output.textContent = "2:00pm - 6:00pm: Study JavaScript 📚📚";
+        await pause(4000);
+
+        output.textContent = "7:00pm - 8:30pm: Dinner at a restaurant 🍛🍽️";
+        await pause(1500);
+
+        output.textContent = "9:00pm - 11:00pm: Movie at Century City 🍿🎦";
+        await pause(2000);
+    }
+
+    dailyRoutine();
 
   </script>
 
